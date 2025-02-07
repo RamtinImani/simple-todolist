@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="یک برنامه مدیریت کارها برای سازماندهی و پیگیری وظایف روزانه شما."
+    />
+    <meta name="keywords" content="Todo List, لیست کارها, مدیریت وظایف, برنامه ریزی, بهره وری" />
+    <title>مدیریت لیست کارها | Todo List</title>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- TodoList Header -->
+      <header class="header">
+        <h1 class="header__title">مدیریت لیست کارها</h1>
+      </header>
+
+      <section class="todolist">
+        <!-- TodoList Data -->
+        <div class="todolist__data">
+          <!-- Add New Task Form -->
+          <form class="todolist__form" action="#">
+            <input
+              type="text"
+              name="todolist-input"
+              class="todolist__input"
+              required
+              title="تسک جدید"
+              placeholder="تسک جدید..."
+            />
+            <button class="todolist__button--add" title="اضافه کردن" type="submit">
+              <i class="bx bx-plus-circle"></i>
+            </button>
+          </form>
+          <!-- Todo List Filters -->
+          <div class="todolist__select">
+            <select name="todolist-filters" class="todolist__filters" title="فیلتر">
+              <option class="todolist__options" value="all">همه</option>
+              <option class="todolist__options" value="completed">تکمیل شده</option>
+              <option class="todolist__options" value="uncompleted">تکمیل نشده</option>
+            </select>
+          </div>
+        </div>
+        <!-- TodoList Content -->
+        <div class="todolist__content">
+          <!-- TodoList Items -->
+          <ul class="todolist__list"></ul>
+        </div>
+
+        <!-- Edit Task Modal -->
+        <!-- Dark Backdrop -->
+        <div class="modal-backdrop"></div>
+
+        <!-- Edit Modal -->
+        <div class="modal">
+          <div class="modal__header">
+            <h2 class="modal__header-title">ویرایش تسک</h2>
+            <button class="todolist__button modal__header-close"><i class="bx bx-x"></i></button>
+          </div>
+          <div class="modal__body">
+            <form class="modal__form" action="#">
+              <input class="modal__form-input" type="text" title="ویرایش تسک" autofocus />
+              <div class="modal__button">
+                <button type="submit" class="modal__edit-button" title="ویرایش">ویرایش</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- JavaScript File Link -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

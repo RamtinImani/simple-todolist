@@ -1,0 +1,466 @@
+/*=============== FONTS ===============*/
+@font-face {
+  font-family: "IRANSansX-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/IRANSansX-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "IRANSansX-Number";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/IRANSansXFaNum-Medium.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*===   Reset Style   ===*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/*====== VARIABLES ======*/
+:root {
+  --primaryColor: #493d9e;
+  --bodyColor: #b2a5ff;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --mainRed: #db2777;
+}
+/*====== STYLES ======*/
+html {
+  font-size: 62.5%; /*font-size: 10px;*/
+}
+
+body {
+  font-family: "IRANSansX-Medium";
+  font-size: 1.6rem;
+  color: var(--mainBlack);
+  background-color: var(--bodyColor);
+}
+
+button > i {
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1024px;
+  padding-inline: 1.6rem;
+  margin: 5rem auto 0;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.header__title {
+  font-size: 4.2rem;
+  font-weight: bold;
+}
+
+.todolist {
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.todolist__data {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.todolist__form {
+  position: relative;
+  width: 75%;
+  height: 5rem;
+  background-color: var(--mainWhite);
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.todolist__input {
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  font-family: "IRANSansX-Number";
+  font-size: 1.6rem;
+  padding: 1rem 1rem 1rem 5rem;
+  height: 100%;
+  flex: 1;
+  transition: all 0.2s;
+}
+
+.todolist__input:focus {
+  border: 2px solid var(--primaryColor);
+}
+
+.todolist__button--add {
+  outline: none;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  inset-block: 0;
+  left: 0.5rem;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: transparent;
+  color: var(--primaryColor);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.todolist__button--add i {
+  font-size: 2rem;
+}
+
+.todolist__button--add:hover {
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+.todolist__select {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 25%;
+}
+
+.todolist__select::after {
+  content: "\25bc";
+  position: absolute;
+  left: 1rem;
+  top: 2rem;
+  color: var(--primaryColor);
+  pointer-events: none;
+}
+
+.todolist__filters {
+  border: none;
+  outline: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  font-family: "IRANSansX-Medium";
+  font-size: 1.6rem;
+  padding-inline: 1rem;
+  color: var(--primaryColor);
+  background-color: var(--mainWhite);
+  cursor: pointer;
+}
+
+.todolist__options {
+  direction: rtl;
+  appearance: none;
+}
+
+.todolist__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.todolist__item {
+  min-height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--mainWhite);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.todolist__title {
+  font-family: "IRANSansX-Number";
+  line-height: 1.2;
+  padding-left: 0.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.todolist__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.todolist__createdAt {
+  font-size: 1.4rem;
+  font-family: "IRANSansX-Number";
+}
+
+.todolist__buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.todolist__button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.todolist__button i {
+  font-size: 1.8rem;
+}
+
+.todolist__button--edit {
+  color: var(--mainBlack);
+}
+
+.todolist__button--check {
+  color: var(--primaryColor);
+}
+
+.todolist__button--remove {
+  color: var(--mainRed);
+}
+
+.todolist__completed {
+  text-decoration: line-through;
+  text-decoration-color: var(--primaryColor);
+  opacity: 0.8;
+}
+
+/*====== MODAL ======*/
+.modal-backdrop {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: all 0.2s;
+}
+
+.show-modal-backdrop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--mainWhite);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 40rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  z-index: 1000;
+  transition: all 0.2s;
+}
+
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__header-title {
+  font-size: 2.2rem;
+  color: var(--primaryColor);
+}
+
+.modal__header-close i {
+  font-size: 2rem;
+  color: var(--mainBlack);
+}
+
+.modal__body {
+  margin: 20px 0;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.modal__form-input {
+  width: 100%;
+  padding: 1rem;
+  font-family: "IRANSansX-Number";
+  font-size: 1.6rem;
+  border: 1px solid var(--mainGrey);
+  border-radius: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modal__form-input:focus {
+  border-color: var(--primaryColor);
+}
+
+.modal__edit-button {
+  font-family: "IRANSansX-Medium";
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal__footer-button:hover {
+  background-color: #6c28d9eb;
+}
