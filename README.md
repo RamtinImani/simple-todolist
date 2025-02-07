@@ -19,9 +19,6 @@ This project has been created to help me practice **JavaScript**, focusing on **
 - Local storage
 - Data filtering
 
-## 📸 Preview
-
-
 ## ⚙️ How to Use
 1. **Clone this repository**:
 
@@ -34,3 +31,9 @@ This project has been created to help me practice **JavaScript**, focusing on **
 3.**Open the index.html file in your web browser.**
 
 4.**Start managing your tasks by adding, editing, completing, and deleting to-dos directly from the browser interface.**
+
+### 🪄 `Made With 🤍`
+---
+## 📸Preview
+![preview image](/preview.png)
+---
