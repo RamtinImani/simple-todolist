@@ -34,6 +34,8 @@ This project has been created to help me practice **JavaScript**, focusing on **
 
 ### 🪄 `Made With 🤍`
 ---
+## 🚀 Live Demo:
+🔗 [View Demo](https://ramtinimani.github.io/simple-todolist/)
 ## 📸Preview
 ![preview image](/preview.png)
 ---
