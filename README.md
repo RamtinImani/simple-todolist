@@ -32,10 +32,10 @@ This project has been created to help me practice **JavaScript**, focusing on **
 
 4.**Start managing your tasks by adding, editing, completing, and deleting to-dos directly from the browser interface.**
 
-### 🪄 `Made With 🤍`
 ---
 ## 🚀 Live Demo:
 🔗 [View Demo](https://ramtinimani.github.io/simple-todolist/)
 ## 📸Preview
 ![preview image](/preview.png)
 ---
+### 🪄 `Made With 🤍`
